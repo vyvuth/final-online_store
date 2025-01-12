@@ -1,0 +1,32 @@
+/* background color*/
+
+.bg-crimson-700 {
+  background-color: #ca0b1e;
+}
+.bg-crimson-600 {
+  background-color: #eb0f25;
+}
+.bg-crimson-500 {
+  background-color: #ff3146;
+}
+.bg-crimson-400 {
+  background-color: #ff6272;
+}
+.bg-crimson-300 {
+  background-color: #ff9ba5;
+}
+.bg-crimson-200 {
+  background-color: #ffc4ca;
+}
+.bg-crimson-100 {
+  background-color: #ffdfe2;
+}
+.bg-crimson-50 {
+  background-color: #fff1f2;
+}
+
+/*text shadow*/
+
+.text-shadow {
+  text-shadow: 10px 2px 2px rgba(20, 20, 20, 0.5);
+}
