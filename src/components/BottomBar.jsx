@@ -19,8 +19,12 @@ function BottomBar() {
             <MdContactPhone className=" fs-1" />{" "}
             <p className=" m-0 ">Contact</p>
           </a>
-          <a className=" text-center text-light text-decoration-none py-2">
+          <a className=" text-center text-light text-decoration-none py-2 position-relative">
             <FaCartShopping className=" fs-1" /> <p className=" m-0 ">Cart</p>
+            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+              10+
+              <span className="visually-hidden">unread messages</span>
+            </span>
           </a>
           <a className=" text-center text-light text-decoration-none py-2">
             <MdAccountCircle className=" fs-1" />{" "}

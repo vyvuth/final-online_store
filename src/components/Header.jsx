@@ -7,7 +7,7 @@ function Header() {
     <>
       <nav className=" container-fluid navbar bg-crimson-700 py-3">
         <div className=" container">
-          <div className=" col-2 ">
+          <div className=" col-3 ">
             <a
               href="#"
               className="text-light fs-5 text-decoration-none fw-bold text-uppercase text-shadow"
@@ -15,9 +15,9 @@ function Header() {
               vy-store
             </a>
           </div>
-          <div className=" col-8 bg-body rounded-5 overflow-hidden">
+          <div className=" col-6 bg-body rounded-5 overflow-hidden">
             <form className="d-flex">
-              <select className="form-select w-25 d-none d-md-block shadow-none rounded-0 bg-light border-0 ">
+              <select className="form-select w-50 d-none d-md-block shadow-none rounded-0 bg-light border-0 ">
                 <option className=" bg-light rounded">All Categories</option>
               </select>
               <input
@@ -30,12 +30,22 @@ function Header() {
               </button>
             </form>
           </div>
-          <div className=" col-2 d-none d-lg-block  text-end">
-            <div>
-              <FaCartShopping className="me-2 text-light fs-1 m-0" />
-              <a href="#" className="text-light text-decoration-none  ">
-                Shopping Cart
-              </a>
+          <div className=" col-3 d-none d-lg-flex justify-content-end align-items-center  text-end">
+            <a className=" position-relative me-3">
+              <FaCartShopping className="me-2 text-light fs-4 m-0" />
+              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                10+
+                <span className="visually-hidden">unread messages</span>
+              </span>
+            </a>
+
+            <div className=" text-end mx-3">
+              <button className=" btn btn-light rounded-0 px-3 fw-bolder ">
+                Register
+              </button>
+              <button className=" btn border-0 text-light fw-bolder fs-5    rounded-0 px-3">
+                Login
+              </button>
             </div>
           </div>
         </div>
