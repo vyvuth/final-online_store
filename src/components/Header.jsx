@@ -1,8 +1,13 @@
 import { FaCartShopping } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
 import BottomBar from "./BottomBar";
+import { MdOutlineAccountCircle } from "react-icons/md";
+import { IoIosSettings } from "react-icons/io";
+import { AiOutlineLogout } from "react-icons/ai";
+import { useState } from "react";
 
 function Header() {
+  const [login, setLogin] = useState(true);
   return (
     <>
       <nav className=" container-fluid navbar bg-crimson-700 py-3">
@@ -38,15 +43,59 @@ function Header() {
                 <span className="visually-hidden">unread messages</span>
               </span>
             </a>
-
-            <div className=" text-end mx-3">
-              <button className=" btn btn-light rounded-0 px-3 fw-bolder ">
-                Register
-              </button>
-              <button className=" btn border-0 text-light fw-bolder fs-5    rounded-0 px-3">
-                Login
-              </button>
-            </div>
+            {login ? (
+              <div className=" d-flex ms-3">
+                <div
+                  style={{ width: 40, height: 40 }}
+                  className=" rounded-circle bg-warning overflow-hidden"
+                >
+                  <img
+                    className=" w-100 h-100 object-fit-cover"
+                    src="https://www.purina.co.uk/sites/default/files/styles/ttt_image_510/public/2022-06/GettyImages-1186344530.jpg?itok=DPCnhCoO"
+                    alt="404"
+                  />
+                </div>
+                <div className="dropdown">
+                  <button
+                    className="btn border-0 text-light dropdown-toggle fw-bolder text-uppercase"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Useraccount
+                  </button>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <a className="dropdown-item" href="#">
+                        <MdOutlineAccountCircle className=" fs-4 mb-1 ms-1 me-1" />
+                        My Account
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="#">
+                        <IoIosSettings className=" fs-4 mb-1 ms-1 me-1" />
+                        Settings
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="#">
+                        <AiOutlineLogout className=" fs-4 mb-1 ms-1 me-1" />
+                        Log Out
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            ) : (
+              <div className=" text-end mx-3">
+                <button className=" btn btn-light rounded-0 px-3 fw-bolder ">
+                  Register
+                </button>
+                <button className=" btn border-0 text-light fw-bolder fs-5    rounded-0 px-3">
+                  Login
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </nav>

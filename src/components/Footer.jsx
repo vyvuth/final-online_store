@@ -4,7 +4,7 @@ import { MdMarkEmailUnread } from "react-icons/md";
 import { MdDateRange } from "react-icons/md";
 import { FaDirections } from "react-icons/fa";
 import { FaBus } from "react-icons/fa";
-
+import "../style.scss";
 function Footer() {
   return (
     <>
@@ -37,7 +37,7 @@ function Footer() {
           </div>
           <hr className=" text-light" />
           <div className="row d-flex justify-content-center">
-            <div className=" col-lg-4 col-md-12 d-grid gap-2">
+            <div className=" col-lg-3 col-md-6 d-grid gap-1">
               <h3 className=" text-light text-uppercase fs-5 mt-3">
                 useful links
               </h3>
@@ -78,7 +78,7 @@ function Footer() {
                 faq
               </a>
             </div>
-            <div className=" col-lg-4 col-md-12 d-grid gap-2 ">
+            <div className=" col-lg-3 col-md-6 d-grid gap-1 ">
               <h3 className=" text-light text-uppercase fs-5 mt-3">
                 contact information
               </h3>
@@ -121,12 +121,12 @@ function Footer() {
                 <FaBus style={{ fontSize: "20px" }} /> roads to us
               </a>
             </div>
-            <div className=" col-lg-4 col-md-12 overflow-hidden">
+            <div className=" frame col-lg-6 col-md-12 overflow-hidden ">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d250151.16293712638!2d104.72502447337733!3d11.579653823308595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2skh!4v1736438866083!5m2!1sen!2skh"
-                width="380"
-                height="200"
-                className=" rounded mt-4"
+                width="600"
+                height="300"
+                className=" mt-4"
               ></iframe>
             </div>
             <div className=" col-lg-6 col-md-12 d-lg-none d-block mt-3 text-center py-3">
