@@ -4,3 +4,15 @@
     height: 50vh;
   }
 }
+
+@media (max-width: 567px) {
+  .carousel-inner {
+    height: 250px !important;
+  }
+  .row .Sliders {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 800px) {
+}

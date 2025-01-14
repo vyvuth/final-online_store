@@ -2,19 +2,23 @@ import Header from "./components/Header";
 import AppProvider from "./store/AppProvider";
 import "./App.css";
 import Footer from "./components/Footer";
+import { Outlet } from "react-router-dom";
+import AppProvide from "./store/AppProvider";
 
 function App() {
   return (
     <div>
-      <AppProvider>
+      <AppProvide.Provider>
         <Header>
           <Header />
         </Header>
-        <main style={{ height: "100vh" }}></main>
+        <main>
+          <Outlet />
+        </main>
         <footer>
           <Footer />
         </footer>
-      </AppProvider>
+      </AppProvide.Provider>
     </div>
   );
 }

@@ -4,11 +4,9 @@ const AppProvide = createContext();
 export const AppProvider = ({ children }) => {
   return (
     <div>
-      <AppProvide.Provider value={{ name: "John Doe" }}>
-        {children}
-      </AppProvide.Provider>
+      <AppProvide.Provider value={{}}>{children}</AppProvide.Provider>
     </div>
   );
 };
 
-export default AppProvider;
+export default AppProvide;

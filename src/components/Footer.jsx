@@ -10,7 +10,7 @@ function Footer() {
     <>
       <div className=" container-fluid bg-crimson-600 bottom-100 py-3">
         <div className=" container">
-          <div className="row d-flex justify-content-center">
+          <div className="row d-flex justify-content-center align-items-center">
             <div className=" col-lg-4 col-md-12 text-center">
               <h3 className=" fs-4 text-light fw-medium m-0 me-4">
                 Subscribe our Newsletter

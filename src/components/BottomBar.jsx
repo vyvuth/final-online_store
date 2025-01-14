@@ -3,22 +3,32 @@ import { MdContactPhone } from "react-icons/md";
 import { AiFillProduct } from "react-icons/ai";
 import { FaCartShopping } from "react-icons/fa6";
 import { MdAccountCircle } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 function BottomBar() {
   return (
     <>
       <div className=" container-fluid bg-crimson-700 d-lg-none fixed-bottom py-3">
         <div className=" nav justify-content-between">
-          <a className=" text-center text-light text-decoration-none py-2">
+          <NavLink
+            to={"/"}
+            className=" text-center text-light text-decoration-none py-2"
+          >
             <FaHome className=" fs-1" /> <p className=" m-0  ">Home</p>
-          </a>
-          <a className=" text-center text-light text-decoration-none py-2">
+          </NavLink>
+          <NavLink
+            to={"/product"}
+            className=" text-center text-light text-decoration-none py-2"
+          >
             <AiFillProduct className=" fs-1" /> <p className=" m-0">Product</p>
-          </a>
-          <a className=" text-center text-light text-decoration-none py-2">
+          </NavLink>
+          <NavLink
+            to={"/contect"}
+            className=" text-center text-light text-decoration-none py-2"
+          >
             <MdContactPhone className=" fs-1" />{" "}
             <p className=" m-0 ">Contact</p>
-          </a>
+          </NavLink>
           <a className=" text-center text-light text-decoration-none py-2 position-relative">
             <FaCartShopping className=" fs-1" /> <p className=" m-0 ">Cart</p>
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
