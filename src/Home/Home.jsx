@@ -5,6 +5,7 @@ import { IoIosClock } from "react-icons/io";
 import { IoGiftOutline } from "react-icons/io5";
 import "../style.scss";
 import "../App.css";
+import HomeItem from "./HomeItem";
 function Home() {
   return (
     <>
@@ -66,7 +67,7 @@ function Home() {
                 className="carousel-item position-relative text-light"
               >
                 <div className=" position-absolute z-3 top-50 start-50 translate-middle text-center">
-                  <h1>THE BIGGEST SALES</h1>
+                  <h1>New Arrival Shopping</h1>
                   <h2 className=" fw-light">Specail for today</h2>
                   <button className=" btn btn-danger">Shop now</button>
                 </div>
@@ -74,6 +75,7 @@ function Home() {
                   src="https://images-cdn.ubuy.co.in/65b5305c6faa2a4b8a7df56b-wantdo-men-39-s-winter-coat-windproof.jpg"
                   className="d-block w-100 h-100 object-fit-cover"
                   alt=""
+                  style={{ filter: "brightness(70%)" }}
                 />
               </div>
               <div
@@ -81,7 +83,7 @@ function Home() {
                 className="carousel-item position-relative text-light"
               >
                 <div className=" position-absolute z-3 top-50 start-50 translate-middle text-center">
-                  <h1>THE BIGGEST SALES</h1>
+                  <h1>Discount 50% off</h1>
                   <h2 className=" fw-light">Specail for today</h2>
                   <button className=" btn btn-danger">Shop now</button>
                 </div>
@@ -89,6 +91,7 @@ function Home() {
                   src="https://ae01.alicdn.com/kf/S2b0d9004d2be4725a7a4ee279dbf778bG.jpg?width=790&height=772&hash=1562"
                   className="d-block w-100 h-100 object-fit-cover"
                   alt=""
+                  style={{ filter: "brightness(70%)" }}
                 />
               </div>
               <div
@@ -96,7 +99,7 @@ function Home() {
                 className="carousel-item position-relative text-light"
               >
                 <div className=" position-absolute z-3 top-50 start-50 translate-middle text-center">
-                  <h1>THE BIGGEST SALES</h1>
+                  <h1>Free biggest gift @topfan</h1>
                   <h2 className=" fw-light">Specail for today</h2>
                   <button className=" btn btn-danger">Shop now</button>
                 </div>
@@ -104,6 +107,7 @@ function Home() {
                   src="https://i0.wp.com/supercells.co.za/wp-content/uploads/2024/03/iphone-15-6c.jpg?fit=1360%2C821&ssl=1"
                   className="d-block w-100 h-100 object-fit-cover"
                   alt=""
+                  style={{ filter: "brightness(70%)" }}
                 />
               </div>
             </div>
@@ -133,8 +137,11 @@ function Home() {
             </button>
           </div>
         </div>
-        <div style={{ marginTop: "30px" }} className="container">
-          <div className="row shadow align-items-center px-3 p-3 overflow-auto flex-nowrap">
+        <div
+          style={{ marginTop: "30px" }}
+          className="container bg-light-subtle "
+        >
+          <div className="row  align-items-center px-3 p-3 overflow-auto flex-nowrap">
             <div className="col-lg-3 col-12 col-md-6 Sliders">
               <div className="d-flex align-items-center">
                 {/* Bonus Plus */}
@@ -217,6 +224,7 @@ function Home() {
             </div>
           </div>
         </div>
+        <HomeItem />
       </div>
     </>
   );
