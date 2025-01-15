@@ -4,6 +4,7 @@ import { FaTruck } from "react-icons/fa6";
 import { IoIosClock } from "react-icons/io";
 import { IoGiftOutline } from "react-icons/io5";
 import "../style.scss";
+import "../App.css";
 function Home() {
   return (
     <>
@@ -44,28 +45,61 @@ function Home() {
               ></button>
             </div>
             <div className="carousel-inner">
-              <div className="carousel-item active">
+              <div
+                style={{ height: "100vh" }}
+                className="carousel-item active position-relative text-light"
+              >
+                <div className=" position-absolute z-3 top-50 start-50 translate-middle text-center">
+                  <h1>THE BIGGEST SALES</h1>
+                  <h2 className=" fw-light">Specail for today</h2>
+                  <button className=" btn btn-danger">Shop now</button>
+                </div>
                 <img
                   src="https://i.ebayimg.com/00/s/ODU1WDEzODU=/z/wO4AAOSwaJ1kgN2S/$_57.JPG?set_id=880000500F"
+                  style={{ filter: "brightness(70%)" }}
                   className="d-block w-100 h-100 object-fit-cover"
                   alt=""
                 />
               </div>
-              <div className="carousel-item">
+              <div
+                style={{ height: "100vh" }}
+                className="carousel-item position-relative text-light"
+              >
+                <div className=" position-absolute z-3 top-50 start-50 translate-middle text-center">
+                  <h1>THE BIGGEST SALES</h1>
+                  <h2 className=" fw-light">Specail for today</h2>
+                  <button className=" btn btn-danger">Shop now</button>
+                </div>
                 <img
                   src="https://images-cdn.ubuy.co.in/65b5305c6faa2a4b8a7df56b-wantdo-men-39-s-winter-coat-windproof.jpg"
                   className="d-block w-100 h-100 object-fit-cover"
                   alt=""
                 />
               </div>
-              <div className="carousel-item">
+              <div
+                style={{ height: "100vh" }}
+                className="carousel-item position-relative text-light"
+              >
+                <div className=" position-absolute z-3 top-50 start-50 translate-middle text-center">
+                  <h1>THE BIGGEST SALES</h1>
+                  <h2 className=" fw-light">Specail for today</h2>
+                  <button className=" btn btn-danger">Shop now</button>
+                </div>
                 <img
                   src="https://ae01.alicdn.com/kf/S2b0d9004d2be4725a7a4ee279dbf778bG.jpg?width=790&height=772&hash=1562"
                   className="d-block w-100 h-100 object-fit-cover"
                   alt=""
                 />
               </div>
-              <div className="carousel-item">
+              <div
+                style={{ height: "100vh" }}
+                className="carousel-item position-relative text-light"
+              >
+                <div className=" position-absolute z-3 top-50 start-50 translate-middle text-center">
+                  <h1>THE BIGGEST SALES</h1>
+                  <h2 className=" fw-light">Specail for today</h2>
+                  <button className=" btn btn-danger">Shop now</button>
+                </div>
                 <img
                   src="https://i0.wp.com/supercells.co.za/wp-content/uploads/2024/03/iphone-15-6c.jpg?fit=1360%2C821&ssl=1"
                   className="d-block w-100 h-100 object-fit-cover"
@@ -100,9 +134,9 @@ function Home() {
           </div>
         </div>
         <div style={{ marginTop: "30px" }} className="container">
-          <div className="row shadow align-items-center px-3 p-3">
-            <div className="col-lg-3 Sliders">
-              <div className="d-flex align-items-center ">
+          <div className="row shadow align-items-center px-3 p-3 overflow-auto flex-nowrap">
+            <div className="col-lg-3 col-12 col-md-6 Sliders">
+              <div className="d-flex align-items-center">
                 {/* Bonus Plus */}
                 <IoGiftOutline
                   style={{ fontSize: "70px" }}
@@ -121,7 +155,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3 Sliders">
+            <div className="col-lg-3 col-12 col-md-6 Sliders">
               <div className="d-flex align-items-center">
                 {/* Free Shipping */}
                 <FaTruck
@@ -141,7 +175,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3 Sliders">
+            <div className="col-lg-3 col-12 col-md-6 Sliders">
               <div className="d-flex align-items-center">
                 {/* Discount Offers */}
                 <AiTwotoneDollarCircle
@@ -161,7 +195,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3 Sliders">
+            <div className="col-lg-3 col-12 col-md-6 Sliders">
               <div className="d-flex align-items-center">
                 {/* Gift Bonus */}
                 <IoIosClock
