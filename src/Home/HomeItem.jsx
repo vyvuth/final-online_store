@@ -12,7 +12,7 @@ function HomeItem() {
                 style={{ height: "60vh" }}
                 className=" col-12 position-relative"
               >
-                <div className=" position-absolute z-3 font-robot text-light mt-5 mx-5 text-center p-5">
+                <div className="main-text position-absolute z-3 font-robot text-light mt-5 mx-5 text-center p-5 ">
                   <h1 className="text-capitalize shadow fs-2">new laptops</h1>
                   <h6 className=" fw-light">Now starting at $1299</h6>
                   <button className="btn btn-danger text-capitalize mt-2">
@@ -30,11 +30,11 @@ function HomeItem() {
                 {/* slide-1 */}
                 <div
                   style={{ height: "160px" }}
-                  className=" slide1 col-lg-6 col-md-12 pe-lg-1 position-relative"
+                  className=" slide1 col-lg-6 pe-lg-1 position-relative"
                 >
                   <div
                     style={{ marginTop: "40px" }}
-                    className=" position-absolute z-3 font-robot text-light text-center mx-4"
+                    className="main-text1 position-absolute z-3 font-robot text-light text-center mx-4"
                   >
                     <h1 style={{ fontSize: "25px" }}>New mobile phone</h1>
                     <h6 style={{ fontSize: "17px" }} className=" fw-light">
@@ -57,11 +57,11 @@ function HomeItem() {
                 {/* slide-2 */}
                 <div
                   style={{ height: "160px" }}
-                  className="slide-2 col-lg-6 col-md-12 ps-lg-1 position-relative"
+                  className="slide-2 col-lg-6 ps-lg-1 position-relative"
                 >
                   <div
                     style={{ marginTop: "40px" }}
-                    className=" position-absolute z-3 font-robot text-light text-center mx-5"
+                    className="main-text2 position-absolute z-3 font-robot text-light text-center mx-5"
                   >
                     <h1 style={{ fontSize: "22px" }}>Watch collection</h1>
                     <h6 style={{ fontSize: "15px" }} className=" fw-light">
@@ -89,11 +89,11 @@ function HomeItem() {
                 {/* slide-3 */}
                 <div
                   style={{ height: "200px" }}
-                  className=" slide3 col-lg-6 col-md-12 pe-lg-1 position-relative"
+                  className=" slide3 col-lg-6 pe-lg-1 position-relative"
                 >
                   <div
                     style={{ marginTop: "50px" }}
-                    className=" position-absolute z-3 font-robot text-light text-center mx-5"
+                    className="main-text3 position-absolute z-3 font-robot text-light text-center mx-5"
                   >
                     <h1 style={{ fontSize: "20px" }}>Summer collection</h1>
                     <h6 style={{ fontSize: "15px" }} className=" fw-light">
@@ -116,11 +116,11 @@ function HomeItem() {
                 {/* slide-4 */}
                 <div
                   style={{ height: "200px" }}
-                  className="slide4 col-lg-6 col-md-12 ps-lg-1 position-relative "
+                  className="slide4 col-lg-6 ps-lg-1 position-relative "
                 >
                   <div
                     style={{ marginTop: "50px" }}
-                    className=" position-absolute z-3 font-robot text-light text-center mx-5"
+                    className="main-text4 position-absolute z-3 font-robot text-light text-center mx-5"
                   >
                     <h1 style={{ fontSize: "20px" }}>Shoes for you</h1>
                     <h6 style={{ fontSize: "15px" }} className=" fw-light">
@@ -147,7 +147,7 @@ function HomeItem() {
               >
                 <div
                   style={{ marginTop: "90px" }}
-                  className=" position-absolute z-3 font-robot text-light mx-5 text-center p-3 end-0"
+                  className="main-text5 position-absolute z-3 font-robot text-light mx-5 text-center p-3 end-0"
                 >
                   <h1 className=" fs-3">Popular jewellery brands</h1>
                   <h6 className=" fw-light">Now starting at $1799</h6>

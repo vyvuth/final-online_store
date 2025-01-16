@@ -1,11 +1,38 @@
-@media (max-width: 1200px) {
-  .container .row .frame iframe {
-    width: 100%;
-    height: 50vh;
+@media (max-width: 800px) {
+  // layout shopping cart home page
+  .row .main-text {
+    margin-top: 20vh !important;
+    transform: translateY(-50%) !important;
+  }
+  .row .main-text1 {
+    margin-top: 30vh !important;
+    transform: translateY(-120%) !important;
+    padding: 50px !important;
+  }
+  .row .main-text2 {
+    margin-top: 30vh !important;
+    transform: translateY(-120%) !important;
+    padding: 60px !important;
+  }
+  .row .main-text3 {
+    margin-top: 20vh !important;
+    transform: translateY(-100%) !important;
+    padding: 50px !important;
+  }
+  .row .main-text4 {
+    margin-top: 30vh !important;
+    transform: translateY(-120%) !important;
+    padding: 60px !important;
+  }
+  .row .main-text5 {
+    margin-top: 30vh !important;
+    transform: translateY(-120%) !important;
+    // padding: 60px !important;
   }
 }
 
 @media (max-width: 567px) {
+  // layout carousel
   .carousel-inner {
     height: 500px !important;
   }
@@ -13,6 +40,7 @@
   .main-slide1 {
     flex-direction: column !important;
   }
+  // layout shopping cart home page
   .main-slide .slide1 {
     width: 100% !important;
     height: 25vh !important;
@@ -27,5 +55,59 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
+  // layout google maps
+  .container .row .frame iframe {
+    width: 100%;
+    height: 50vh;
+  }
+  // layout shopping cart home page
+  .main-slide,
+  .main-slide1 {
+    flex-direction: column !important;
+  }
+  .main-slide .slide1 {
+    width: 100% !important;
+    height: 50vh !important;
+    align-items: center;
+  }
+  .main-slide .slide-2,
+  .slide3,
+  .slide4 {
+    margin-top: 10px;
+    width: 100% !important;
+    height: 50vh !important;
+  }
+  .main-text {
+    top: 20% !important;
+    transform: translateY(-50%) !important;
+    transform: translateX(60%) !important;
+  }
+  .main-text1 {
+    top: 30% !important;
+    transform: translateY(-50%) !important;
+    transform: translateX(100%) !important;
+  }
+  .main-text2 {
+    top: 30% !important;
+    transform: translateY(-50%) !important;
+    transform: translateX(100%) !important;
+    padding-right: 10% !important;
+  }
+  .main-text3 {
+    top: 30% !important;
+    transform: translateY(-50%) !important;
+    transform: translateX(100%) !important;
+    padding-right: 5% !important;
+  }
+  .main-text4 {
+    top: 30% !important;
+    transform: translateY(-50%) !important;
+    transform: translateX(100%) !important;
+    padding-right: 17% !important;
+  }
+  .main-text5 {
+    top: 20% !important;
+    transform: translateX(-50%) !important;
+  }
 }

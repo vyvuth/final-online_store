@@ -176,7 +176,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3 col-12 col-md-6 Sliders">
+            <div className="col-lg-3 col-12 col-md-6 ">
               <div className="d-flex align-items-center">
                 {/* Free Shipping */}
                 <FaTruck
