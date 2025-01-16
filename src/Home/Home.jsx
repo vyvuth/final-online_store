@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AiTwotoneDollarCircle } from "react-icons/ai";
 import { FaTruck } from "react-icons/fa6";
 import { IoIosClock } from "react-icons/io";
@@ -6,15 +6,28 @@ import { IoGiftOutline } from "react-icons/io5";
 import "../style.scss";
 import "../App.css";
 import HomeItem from "./HomeItem";
+import "animate.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset: 200,
+      easing: "ease-in-out",
+      once: false,
+      mirror: true,
+    });
+  }, []);
+
   return (
     <>
-      <div className=" container-fluid mt-3 p-0">
+      <div className=" container-fluid mt-3 p-0 ">
         {/* slide AutoPlay */}
         <div className=" container-fluid p-0">
           <div
             id="carouselExampleIndicators"
-            className="carousel slide"
+            className="carousel slide animate__animated animate__rollIn"
             data-bs-ride="carousel"
           >
             <div className="carousel-indicators">
@@ -139,6 +152,7 @@ function Home() {
         </div>
         <div
           style={{ marginTop: "30px" }}
+          data-aos="fade-right"
           className="container bg-light-subtle "
         >
           <div className="row  align-items-center px-3 p-3 overflow-auto flex-nowrap">
@@ -224,8 +238,8 @@ function Home() {
             </div>
           </div>
         </div>
-        <HomeItem />
       </div>
+      <HomeItem />
     </>
   );
 }

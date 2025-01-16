@@ -9,8 +9,21 @@
   .carousel-inner {
     height: 500px !important;
   }
-  .row .Slider {
+  .main-slide,
+  .main-slide1 {
+    flex-direction: column !important;
+  }
+  .main-slide .slide1 {
+    width: 100% !important;
+    height: 25vh !important;
+    align-items: center;
+  }
+  .main-slide .slide-2,
+  .slide3,
+  .slide4 {
     margin-top: 10px;
+    width: 100% !important;
+    height: 25vh !important;
   }
 }
 

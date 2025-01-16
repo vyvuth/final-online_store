@@ -3,10 +3,11 @@ import React from "react";
 function HomeItem() {
   return (
     <>
-      <div className=" container-fluid p-0">
-        <div className=" container p-0 mt-3">
+      <div className=" container-fluid p-lg-0">
+        <div data-aos="fade-up-right" className=" container p-0 mt-3">
           <div className="row">
-            <div className="col-lg-6 col-md-12 py-3">
+            {/* part1 */}
+            <div className="col-lg-6 col-md-12 py-lg-3 px-1">
               <div
                 style={{ height: "60vh" }}
                 className=" col-12 position-relative"
@@ -20,15 +21,16 @@ function HomeItem() {
                 </div>
                 <img
                   className=" w-100 h-100 object-fit-cover"
-                  src="https://www.pcpitstop.com.au/wp-content/uploads/2021/01/home-gamining-computer-1-600px.jpg"
+                  src="https://www.aorus.com/img/blog/components/components.jpg"
                   alt="404"
                   style={{ filter: " brightness(60%)" }}
                 />
               </div>
-              <div className=" d-flex mt-2 overflow-hidden">
+              <div className=" main-slide d-flex mt-2 overflow-hidden">
+                {/* slide-1 */}
                 <div
                   style={{ height: "160px" }}
-                  className=" col-lg-6 col-md-12 me-1 position-relative"
+                  className=" slide1 col-lg-6 col-md-12 pe-lg-1 position-relative"
                 >
                   <div
                     style={{ marginTop: "40px" }}
@@ -52,9 +54,10 @@ function HomeItem() {
                     style={{ filter: " brightness(60%)" }}
                   />
                 </div>
+                {/* slide-2 */}
                 <div
                   style={{ height: "160px" }}
-                  className=" col-lg-6 col-md-12 mx-1 position-relative"
+                  className="slide-2 col-lg-6 col-md-12 ps-lg-1 position-relative"
                 >
                   <div
                     style={{ marginTop: "40px" }}
@@ -80,11 +83,13 @@ function HomeItem() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 col-md-12 py-3 ">
-              <div className=" d-flex overflow-hidden">
+            {/* part2 */}
+            <div className="col-lg-6 col-md-12 py-lg-3 px-1 ">
+              <div className=" main-slide1 d-flex overflow-hidden">
+                {/* slide-3 */}
                 <div
                   style={{ height: "200px" }}
-                  className=" col-lg-6 col-md-12 me-2 position-relative"
+                  className=" slide3 col-lg-6 col-md-12 pe-lg-1 position-relative"
                 >
                   <div
                     style={{ marginTop: "50px" }}
@@ -108,9 +113,10 @@ function HomeItem() {
                     style={{ filter: " brightness(60%)" }}
                   />
                 </div>
+                {/* slide-4 */}
                 <div
                   style={{ height: "200px" }}
-                  className=" col-lg-6 col-md-12 position-relative "
+                  className="slide4 col-lg-6 col-md-12 ps-lg-1 position-relative "
                 >
                   <div
                     style={{ marginTop: "50px" }}

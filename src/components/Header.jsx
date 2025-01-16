@@ -6,6 +6,7 @@ import { IoIosSettings } from "react-icons/io";
 import { AiOutlineLogout } from "react-icons/ai";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import "animate.css";
 
 function Header() {
   const [login, setLogin] = useState(true);
@@ -13,7 +14,7 @@ function Header() {
     <>
       <div className=" sticky-top">
         <nav className=" container-fluid navbar bg-crimson-700 py-3 ">
-          <div className=" container">
+          <div className=" container animate__animated animate__rollIn">
             <div className=" col-3 ">
               <a
                 href="#"
@@ -101,7 +102,7 @@ function Header() {
             </div>
           </div>
         </nav>
-        <div className=" container-fluid bg-crimson-400  d-none d-lg-block ">
+        <div className=" container-fluid bg-crimson-400  d-none d-lg-block animate__animated animate__rollIn ">
           <ul className=" nav justify-content-center">
             <li className=" px-2 py-1 text-uppercase">
               <NavLink to={"/"} className="text-decoration-none text-light">
