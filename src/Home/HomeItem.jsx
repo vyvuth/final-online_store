@@ -1,4 +1,5 @@
 import React from "react";
+import HomeShop from "./HomeShop";
 
 function HomeItem() {
   return (
@@ -166,6 +167,7 @@ function HomeItem() {
           </div>
         </div>
       </div>
+      <HomeShop />
     </>
   );
 }

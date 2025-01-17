@@ -1,25 +1,23 @@
+import React from "react";
 import Header from "./components/Header";
-import AppProvider from "./store/AppProvider";
+import { AppProvider } from "./store/AppProvider"; // Ensure you are importing the correct provider
 import "./App.css";
 import Footer from "./components/Footer";
 import { Outlet } from "react-router-dom";
-import AppProvide from "./store/AppProvider";
 
 function App() {
   return (
-    <div>
-      <AppProvide.Provider>
-        <Header>
-          <Header />
-        </Header>
+    <AppProvider>
+      <div>
+        <Header />
         <main>
           <Outlet />
         </main>
-        <footer>
+        <footer className=" mt-3">
           <Footer />
         </footer>
-      </AppProvide.Provider>
-    </div>
+      </div>
+    </AppProvider>
   );
 }
 

@@ -9,7 +9,6 @@ import Home from "./Home/Home.jsx";
 import Product from "./pages/Product.jsx";
 import Contect from "./pages/Contect.jsx";
 import TestPage from "./pages/TestPage.jsx";
-
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>

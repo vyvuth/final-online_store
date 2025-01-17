@@ -1,11 +1,20 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
+
+// Create a context
 const AppProvide = createContext();
-// eslint-disable-next-line react/prop-types
+
+// Create a provider component
 export const AppProvider = ({ children }) => {
+  const [activeTab, setActiveTab] = useState("feature");
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
+
   return (
-    <div>
-      <AppProvide.Provider value={{}}>{children}</AppProvide.Provider>
-    </div>
+    <AppProvide.Provider value={{ handleTabClick, activeTab }}>
+      {children}
+    </AppProvide.Provider>
   );
 };
 

@@ -29,6 +29,12 @@
     transform: translateY(-120%) !important;
     // padding: 60px !important;
   }
+  //btn cllick menu
+  .container .main-row {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
 }
 
 @media (max-width: 567px) {
