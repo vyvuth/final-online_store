@@ -13,7 +13,7 @@ function HomeShop() {
       <div className="container-fluid p-lg-0">
         <div className="container p-0">
           {/* button Menu */}
-          <div className="row main-row">
+          <div className="row ">
             <div className="col-lg-3 col-md-3 mt-4">
               <button className="nav btn border-0 text-dark text-decoration-none fs-5 font-family">
                 Featured
@@ -38,14 +38,7 @@ function HomeShop() {
 
           {/* Tab Content */}
           <div>
-            <div
-              className="d-flex flex-nowrap pt-3 mt-3"
-              style={{
-                overflowX: "auto",
-                height: "60vh",
-                whiteSpace: "nowrap",
-              }}
-            >
+            <div className="flex-nowrap overflow-auto row pt-3 mt-3">
               {/* Featured Cards */}
               {[...Array(20)].map((_, index) => (
                 <div className="col-lg-3 col-md-4 col-sm-6 mx-2" key={index}>
