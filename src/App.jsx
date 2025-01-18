@@ -13,7 +13,7 @@ function App() {
         <main>
           <Outlet />
         </main>
-        <footer className=" mt-3">
+        <footer>
           <Footer />
         </footer>
       </div>
