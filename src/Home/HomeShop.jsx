@@ -18,7 +18,9 @@ function HomeShop() {
         <div data-aos="flip-left" className="row nav nav-fill">
           <div className="col-lg-3 col-md-3 mt-4">
             <button
-              className="nav btn border-0 text-dark text-decoration-none fs-5 font-family"
+              className={`nav btn btn-outline-info rounded-2 p-2  border-0 text-dark text-decoration-none fs-5 font-family ${
+                activeTab === "featured" ? "active" : ""
+              }`}
               onClick={() => handleTabClick("featured")}
             >
               Featured
@@ -26,7 +28,7 @@ function HomeShop() {
           </div>
           <div className="col-lg-3 col-md-3 mt-4">
             <button
-              className={`nav btn border-0 text-dark text-decoration-none fs-5 font-family ${
+              className={`nav btn border-0 btn-outline-info rounded-2 p-2  text-dark text-decoration-none fs-5 font-family ${
                 activeTab === "sale" ? "active" : ""
               }`}
               onClick={() => handleTabClick("sale")}
@@ -36,7 +38,7 @@ function HomeShop() {
           </div>
           <div className="col-lg-3 col-md-3 mt-4">
             <button
-              className={`nav btn border-0 text-dark text-decoration-none fs-5 font-family ${
+              className={`nav btn border-0 btn-outline-info rounded-2 p-2  text-dark text-decoration-none fs-5 font-family ${
                 activeTab === "topRated" ? "active" : ""
               }`}
               onClick={() => handleTabClick("topRated")}
@@ -46,7 +48,7 @@ function HomeShop() {
           </div>
           <div className="col-lg-3 col-md-3 mt-4">
             <button
-              className={`nav btn border-0 text-dark text-decoration-none fs-5 font-family ${
+              className={`nav btn border-0 btn-outline-info rounded-2 p-2  text-dark text-decoration-none fs-5 font-family ${
                 activeTab === "newArrivals" ? "active" : ""
               }`}
               onClick={() => handleTabClick("newArrivals")}
