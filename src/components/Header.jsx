@@ -14,7 +14,7 @@ function Header() {
     <>
       <div className=" sticky-top">
         <nav className=" container-fluid navbar bg-crimson-700 py-3 ">
-          <div className=" container animate__animated animate__rollIn">
+          <div className=" container animate__animated animate__rollIn ">
             <div className=" col-3 ">
               <a
                 href="#"
@@ -102,31 +102,25 @@ function Header() {
             </div>
           </div>
         </nav>
-        <div className=" container-fluid bg-crimson-400  d-none d-lg-block animate__animated animate__rollIn ">
-          <ul className=" nav justify-content-center">
-            <li className=" px-2 py-1 text-uppercase">
-              <NavLink to={"/"} className="text-decoration-none text-light">
-                Home
-              </NavLink>
-            </li>
-            <li className=" px-2 py-1 text-uppercase">
-              <NavLink
-                to={"/product"}
-                className="text-decoration-none text-light"
-              >
-                all-products
-              </NavLink>
-            </li>
-            <li className=" px-2 py-1 text-uppercase">
-              <NavLink
-                to={"/contect"}
-                className="text-decoration-none text-light"
-              >
-                contact
-              </NavLink>
-            </li>
-          </ul>
-        </div>
+      </div>
+      <div className=" container-fluid d-none d-lg-block animate__animated animate__rollIn ">
+        <ul className=" nav justify-content-center">
+          <li className=" px-2 py-1 text-uppercase">
+            <NavLink to={"/"} className="text-decoration-none text-dark">
+              Home
+            </NavLink>
+          </li>
+          <li className=" px-2 py-1 text-uppercase">
+            <NavLink to={"/product"} className="text-decoration-none text-dark">
+              all-products
+            </NavLink>
+          </li>
+          <li className=" px-2 py-1 text-uppercase">
+            <NavLink to={"/contect"} className="text-decoration-none text-dark">
+              contact
+            </NavLink>
+          </li>
+        </ul>
       </div>
       <BottomBar />
     </>

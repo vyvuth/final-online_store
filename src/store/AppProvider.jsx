@@ -5,10 +5,10 @@ const AppProvide = createContext();
 
 // Create a provider component
 export const AppProvider = ({ children }) => {
-  const [activeTab, setActiveTab] = useState("feature");
+  const [activeTab, setActiveTab] = useState();
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
+  const handleTabClick = () => {
+    setActiveTab(false);
   };
 
   return (
