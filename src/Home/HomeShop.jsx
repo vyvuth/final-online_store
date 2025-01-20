@@ -15,10 +15,10 @@ function HomeShop() {
     <div className="container-fluid p-lg-0">
       <div className="container p-0">
         {/* Navigation Menu */}
-        <div data-aos="flip-left" className="row nav nav-fill">
-          <div className="col-lg-3 col-md-3 mt-4">
+        <div data-aos="flip-left" className=" row nav nav-fill">
+          <div className="col-lg-3 col-md-3 col-sm-6 mt-4 button-click">
             <button
-              className={`nav btn btn-outline-info rounded-2 p-2  border-0 text-dark text-decoration-none fs-5 font-family ${
+              className={`nav btn btn-outline-info rounded-2 p-2 border-0 text-dark text-decoration-none fs-5 font-family ${
                 activeTab === "featured" ? "active" : ""
               }`}
               onClick={() => handleTabClick("featured")}
@@ -26,9 +26,9 @@ function HomeShop() {
               Featured
             </button>
           </div>
-          <div className="col-lg-3 col-md-3 mt-4">
+          <div className="col-lg-3 col-md-3 col-sm-6 mt-4 button-click">
             <button
-              className={`nav btn border-0 btn-outline-info rounded-2 p-2  text-dark text-decoration-none fs-5 font-family ${
+              className={`nav btn btn-outline-info rounded-2 p-2 border-0 text-dark text-decoration-none fs-5 font-family ${
                 activeTab === "sale" ? "active" : ""
               }`}
               onClick={() => handleTabClick("sale")}
@@ -36,9 +36,9 @@ function HomeShop() {
               On Sale
             </button>
           </div>
-          <div className="col-lg-3 col-md-3 mt-4">
+          <div className="col-lg-3 col-md-3 col-sm-6 mt-4 button-click">
             <button
-              className={`nav btn border-0 btn-outline-info rounded-2 p-2  text-dark text-decoration-none fs-5 font-family ${
+              className={`nav btn btn-outline-info rounded-2 p-2 border-0 text-dark text-decoration-none fs-5 font-family ${
                 activeTab === "topRated" ? "active" : ""
               }`}
               onClick={() => handleTabClick("topRated")}
@@ -46,9 +46,9 @@ function HomeShop() {
               Top Rated
             </button>
           </div>
-          <div className="col-lg-3 col-md-3 mt-4">
+          <div className="col-lg-3 col-md-3 col-sm-6 mt-4 button-click">
             <button
-              className={`nav btn border-0 btn-outline-info rounded-2 p-2  text-dark text-decoration-none fs-5 font-family ${
+              className={`nav btn btn-outline-info rounded-2 p-2 border-0 text-dark text-decoration-none fs-5 font-family ${
                 activeTab === "newArrivals" ? "active" : ""
               }`}
               onClick={() => handleTabClick("newArrivals")}

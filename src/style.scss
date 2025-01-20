@@ -35,6 +35,12 @@
     align-items: center;
     padding: 10px;
   }
+  .container .button-click {
+    flex: 25% !important;
+    display: flex !important;
+    padding: auto;
+    margin: 0;
+  }
 }
 
 @media (max-width: 567px) {
