@@ -68,7 +68,7 @@ function HomeShop() {
             <div className=" row pt-3 mt-3">
               {/* Featured Product Card */}
               {/* card1 */}
-              <div className="col-lg-3 col-md-4">
+              <div className="col-lg-3 col-md-4 py-2">
                 <div className="card bg-crimson-700">
                   <div
                     style={{ height: "200px" }}
@@ -142,7 +142,7 @@ function HomeShop() {
                 </div>
               </div>
               {/* card2 */}
-              <div className="col-lg-3 col-md-4">
+              <div className="col-lg-3 col-md-4 py-2">
                 <div className="card bg-crimson-700">
                   <div
                     style={{ height: "200px" }}
@@ -216,7 +216,7 @@ function HomeShop() {
                 </div>
               </div>
               {/* card3 */}
-              <div className="col-lg-3 col-md-4">
+              <div className="col-lg-3 col-md-4 py-2">
                 <div className="card bg-crimson-700">
                   <div
                     style={{ height: "200px" }}
@@ -290,7 +290,7 @@ function HomeShop() {
                 </div>
               </div>
               {/* card4 */}
-              <div className="col-lg-3 col-md-4">
+              <div className="col-lg-3 col-md-4 py-2">
                 <div className="card bg-crimson-700">
                   <div
                     style={{ height: "200px" }}
@@ -377,7 +377,7 @@ function HomeShop() {
             <div className="row pt-3 mt-3">
               {/* Placeholder or Product Cards for Sale */}
               {/* card1 */}
-              <div className="col-lg-3 col-md-4">
+              <div className="col-lg-3 col-md-4 py-2">
                 <div className="card bg-crimson-700">
                   <div
                     style={{ height: "200px" }}
@@ -451,7 +451,7 @@ function HomeShop() {
                 </div>
               </div>
               {/* card2 */}
-              <div className="col-lg-3 col-md-4">
+              <div className="col-lg-3 col-md-4 py-2">
                 <div className="card bg-crimson-700">
                   <div
                     style={{ height: "200px" }}
@@ -525,7 +525,7 @@ function HomeShop() {
                 </div>
               </div>
               {/* card3 */}
-              <div className="col-lg-3 col-md-4">
+              <div className="col-lg-3 col-md-4 py-2">
                 <div className="card bg-crimson-700">
                   <div
                     style={{ height: "200px" }}
@@ -599,7 +599,7 @@ function HomeShop() {
                 </div>
               </div>
               {/* card4 */}
-              <div className="col-lg-3 col-md-4">
+              <div className="col-lg-3 col-md-4 py-2">
                 <div className="card bg-crimson-700">
                   <div
                     style={{ height: "200px" }}
@@ -685,7 +685,7 @@ function HomeShop() {
             <div className="row pt-3 mt-3">
               {/* Placeholder or Product Cards for Top Rated */}
               {/* card1 */}
-              <div className="col-lg-3 col-md-4">
+              <div className="col-lg-3 col-md-4 py-2">
                 <div className="card bg-crimson-700">
                   <div
                     style={{ height: "200px" }}
