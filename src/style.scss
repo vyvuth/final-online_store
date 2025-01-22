@@ -41,6 +41,13 @@
     padding: auto;
     margin: 0;
   }
+  .text-line1 {
+    overflow: hidden !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical !important;
+  }
 }
 
 @media (max-width: 567px) {
@@ -64,6 +71,13 @@
     margin-top: 10px;
     width: 100% !important;
     height: 25vh !important;
+  }
+  .text-line1 {
+    overflow: hidden !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical !important;
   }
 }
 

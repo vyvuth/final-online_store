@@ -35,8 +35,7 @@ function Footer() {
               </form>
             </div>
           </div>
-          <hr className=" text-light" />
-          <div className="row d-flex justify-content-center">
+          <div className="row d-flex justify-content-center border-top mt-3 ">
             <div className=" col-lg-3 col-md-6 d-grid gap-1">
               <h3 className=" text-light text-uppercase fs-5 mt-3">
                 useful links
@@ -129,20 +128,17 @@ function Footer() {
                 className=" mt-4"
               ></iframe>
             </div>
-            <div className=" col-lg-6 col-md-12 d-lg-none d-block mt-3 text-center py-3">
+            <div className=" col-lg-6 col-md-12 d-lg-none d-block mt-3 text-center py-3 d-flex justify-content-between px-5 ">
               <span className=" text-light" style={{ fontSize: "12px" }}>
                 Copyright &copy;2025 All Right Awards
               </span>
-            </div>
-            <div className=" col-lg-6 col-md-12 d-lg-none d-block text-center">
               <p className=" text-light m-0" style={{ fontSize: "12px" }}>
                 Designed & Develop by
                 <span className=" fw-bolder"> VUTH VY</span>
               </p>
             </div>
           </div>
-          <hr className=" mt-5 text-light" />
-          <div className=" row">
+          <div className=" row border-top mt-3">
             <div className=" col-lg-6 col-md-12">
               <span className=" text-light" style={{ fontSize: "12px" }}>
                 Copyright &copy;2025 All Right Awards
