@@ -3,7 +3,7 @@ import AppProvide from "../store/AppProvider";
 import { IoCart, IoEye, IoHeart } from "react-icons/io5";
 
 function HomeShop() {
-  const { product } = useContext(AppProvide);
+  const { product, brand } = useContext(AppProvide);
   return (
     <div className=" container p-lg-0">
       <h3 className=" fs-3 mt-2">Product</h3>
@@ -15,7 +15,7 @@ function HomeShop() {
               className=" col-6 col-md-4 col-lg-3 py-2"
               key={i}
             >
-              <div className=" card overflow-hidden">
+              <div className=" card overflow-hidden shadow">
                 <div className="w-100 " style={{ height: "210px" }}>
                   <img
                     className=" w-100 h-100 object-fit-cover"
@@ -41,6 +41,24 @@ function HomeShop() {
                   <button className=" btn border-0 fs-3 px-2">
                     <IoEye />
                   </button>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+        <h4 className=" mt-3 text-capitalize fs-5 ">Brand of product</h4>
+      </div>
+      <div className="row py-2 overflow-auto flex-nowrap">
+        {brand.map((e, i) => {
+          return (
+            <div key={i} className=" col-lg-3 col-md-3 col-6 border-0">
+              <div className="card overflow-hidden border-0">
+                <div style={{ height: "150px" }} className=" w-100">
+                  <img
+                    src={e.image}
+                    alt="404"
+                    className=" w-100 h-100 object-fit-cover"
+                  />
                 </div>
               </div>
             </div>

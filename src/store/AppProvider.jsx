@@ -30,9 +30,24 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     FetchAPI();
   }, []);
+  // Fetch API OF brands
+  const [brand, setBrand] = useState([]);
+  const API = async () => {
+    try {
+      const res = await axios.get("https://brand-card.onrender.com/brands");
+      setBrand(res.data);
+      console.log(data);
+    } catch (e) {
+      console.log("Error message: " + e.message);
+    }
+  };
+
+  useEffect(() => {
+    API();
+  }, []);
 
   return (
-    <AppProvide.Provider value={{ handleTabClick, activeTab, product }}>
+    <AppProvide.Provider value={{ handleTabClick, activeTab, product, brand }}>
       {children}
     </AppProvide.Provider>
   );
