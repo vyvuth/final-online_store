@@ -4,8 +4,11 @@ import { AiFillProduct } from "react-icons/ai";
 import { FaCartShopping } from "react-icons/fa6";
 import { MdAccountCircle } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import AppProvide from "../store/AppProvider";
 
 function BottomBar() {
+  const { productCount } = useContext(AppProvide);
   return (
     <>
       <div className=" container-fluid bg-crimson-700 d-lg-none fixed-bottom py-3">
@@ -32,7 +35,7 @@ function BottomBar() {
           <a className=" text-center text-light text-decoration-none py-2 position-relative">
             <FaCartShopping className=" fs-1" /> <p className=" m-0 ">Cart</p>
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
-              10+
+              {productCount()}
               <span className="visually-hidden">unread messages</span>
             </span>
           </a>

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import HomeShop from "./HomeShop";
+import AppProvide from "../store/AppProvider";
 
 function HomeItem() {
   return (

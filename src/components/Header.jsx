@@ -4,12 +4,14 @@ import BottomBar from "./BottomBar";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { IoIosSettings } from "react-icons/io";
 import { AiOutlineLogout } from "react-icons/ai";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "animate.css";
+import AppProvide from "../store/AppProvider";
 
 function Header() {
   const [login, setLogin] = useState(true);
+  const { productCount } = useContext(AppProvide);
   return (
     <>
       <div className=" sticky-top">
@@ -42,8 +44,8 @@ function Header() {
               <a className=" position-relative me-3">
                 <FaCartShopping className="me-2 text-light fs-4 m-0" />
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
-                  10+
                   <span className="visually-hidden">unread messages</span>
+                  {productCount()}
                 </span>
               </a>
               {login ? (
