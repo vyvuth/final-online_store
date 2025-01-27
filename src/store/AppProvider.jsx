@@ -64,13 +64,13 @@ export const AppProvider = ({ children }) => {
       const isExist = cart.find((e) => e.id === productId);
       if (isExist) {
         toast("Product has been added please check your ordering...😚", {
-          position: "bottom-right",
+          position: "top-left",
           autoClose: 5000,
           theme: "dark",
         });
       } else {
         toast.success("Product add succesful...🥰", {
-          position: "bottom-right",
+          position: "top-left",
           autoClose: 5000,
           theme: "dark",
         });
