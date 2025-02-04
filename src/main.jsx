@@ -9,6 +9,7 @@ import Home from "./Home/Home.jsx";
 import Product from "./pages/Product.jsx";
 import Contect from "./pages/Contect.jsx";
 import TestPage from "./pages/TestPage.jsx";
+import Cart from "./components/Cart.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
@@ -17,6 +18,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<Product />} />
           <Route path="/contect" element={<Contect />} />
+          <Route path="/cart" element={<Cart />} />
         </Route>
         <Route path="/*" element={<TestPage />} />
       </Routes>

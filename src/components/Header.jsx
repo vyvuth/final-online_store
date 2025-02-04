@@ -11,7 +11,7 @@ import AppProvide from "../store/AppProvider";
 
 function Header() {
   const [login, setLogin] = useState(true);
-  const { productCount } = useContext(AppProvide);
+  const { cart } = useContext(AppProvide);
   return (
     <>
       <div className=" sticky-top">
@@ -41,13 +41,13 @@ function Header() {
               </form>
             </div>
             <div className=" col-3 d-none d-lg-flex justify-content-end align-items-center  text-end">
-              <a className=" position-relative me-3">
+              <NavLink to={"/cart"} className=" position-relative me-3">
                 <FaCartShopping className="me-2 text-light fs-4 m-0" />
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
                   <span className="visually-hidden">unread messages</span>
-                  {productCount()}
+                  {cart.length}
                 </span>
-              </a>
+              </NavLink>
               {login ? (
                 <div className=" d-flex ms-3">
                   <div

@@ -60,7 +60,10 @@ function HomeShop() {
           return (
             <div key={i} className=" col-lg-3 col-md-3 col-6 border-0">
               <div className="card overflow-hidden border-0">
-                <div style={{ height: "150px" }} className=" w-100">
+                <div
+                  style={{ height: "150px", width: "150px", padding: "20px" }}
+                  className=" w-100"
+                >
                   <img
                     src={e.image}
                     alt="404"

@@ -10,6 +10,16 @@ const AppProvide = createContext();
 // eslint-disable-next-line react/prop-types
 export const AppProvider = ({ children }) => {
   const [activeTab, setActiveTab] = useState();
+  const [cart, setCart] = useState(() => {
+    try {
+      const savedCart = localStorage.getItem("cart");
+      return savedCart ? JSON.parse(savedCart) : [];
+    } catch (error) {
+      console.error("Error parsing cart from localStorage:", error);
+      return [];
+    }
+  });
+
   // tap  process
   const handleTabClick = () => {
     setActiveTab(false);
@@ -52,11 +62,23 @@ export const AppProvider = ({ children }) => {
     API();
   }, []);
 
-  // Add to cart
-  const [cart, setCart] = useState(() => {
-    const savedCart = localStorage.getItem("cart");
-    return savedCart ? JSON.parse(savedCart) : [];
-  });
+  // Product-API
+  const [productAPI, setProductAPI] = useState([]);
+  const APIProduct = async () => {
+    try {
+      const res = await axios.get(
+        "https://product-api-pee3.onrender.com/product"
+      );
+      setProductAPI(res.data);
+      console.log(data);
+    } catch (e) {
+      console.log("Error message: " + e.message);
+    }
+  };
+  useEffect(() => {
+    APIProduct();
+  }, []);
+  // Add to cart 1
 
   const addToCart = (productId) => {
     const productAdd = product.find((e) => e.id === productId);
@@ -64,14 +86,14 @@ export const AppProvider = ({ children }) => {
       const isExist = cart.find((e) => e.id === productId);
       if (isExist) {
         toast("Product has been added please check your ordering...😚", {
-          position: "top-center",
-          autoClose: 1000,
+          position: "bottom-right",
+          autoClose: 2000,
           theme: "dark",
         });
       } else {
         toast.success("Product add succesful...🥰", {
-          position: "top-center",
-          autoClose: 1000,
+          position: "bottom-right",
+          autoClose: 2000,
           theme: "dark",
         });
       }
@@ -79,19 +101,84 @@ export const AppProvider = ({ children }) => {
         const isProduct = prev.some((e) => e.id === productId);
         if (isProduct) {
           return prev.map((e) =>
-            e.id === productId ? { ...e, qty: e.qty + 1 } : e
+            e.id === productId
+              ? { ...e, qty: e.qty + 1, subtotal: (e.qty + 1) * e.price }
+              : e
           );
         } else {
-          return [...prev, { ...productAdd, qty: 1 }];
+          return [
+            ...prev,
+            { ...productAdd, qty: 1, subtotal: productAdd.price },
+          ];
         }
       });
     }
   };
-  const productCount = () => {
-    return cart.reduce((e, prev) => e + prev.qty, 0);
+  //all-products;
+  const addToCarts = (productId) => {
+    const productAdd = productAPI.find((e) => e.id === productId);
+    if (productAdd) {
+      const isExist = cart.find((e) => e.id === productId);
+      if (isExist) {
+        toast("Product has been added please check your ordering...😚", {
+          position: "bottom-right",
+          autoClose: 2000,
+          theme: "dark",
+        });
+      } else {
+        toast.success("Product add succesful...🥰", {
+          position: "bottom-right",
+          autoClose: 2000,
+          theme: "dark",
+        });
+      }
+      setCart((prev) => {
+        const isProduct = prev.some((e) => e.id === productId);
+        if (isProduct) {
+          return prev.map((e) =>
+            e.id === productId
+              ? { ...e, qty: e.qty + 1, subtotal: (e.qty + 1) * e.price }
+              : e
+          );
+        } else {
+          return [
+            ...prev,
+            { ...productAdd, qty: 1, subtotal: productAdd.price },
+          ];
+        }
+      });
+    }
+  };
+  const productDelete = (productId) => {
+    setCart((prevCart) => prevCart.filter((e) => e.id !== productId));
+
+    toast.success("Product deleted successfully...💥", {
+      position: "bottom-right",
+      autoClose: 2000,
+      theme: "dark",
+    });
+  };
+
+  // increment the value
+  const handleQty = (productId, newQty) => {
+    setCart((prev) =>
+      prev.map((item) =>
+        item.id === productId
+          ? {
+              ...item,
+              qty: Number(newQty),
+              subtotal: item.price * Number(newQty),
+            }
+          : item
+      )
+    );
   };
   useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
+    try {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    } catch (error) {
+      console.error("Error saving cart to localStorage:", error);
+    }
   }, [cart]);
 
   return (
@@ -103,7 +190,11 @@ export const AppProvider = ({ children }) => {
         brand,
         loadings,
         addToCart,
-        productCount,
+        cart,
+        productDelete,
+        productAPI,
+        addToCarts,
+        handleQty,
       }}
     >
       {children}

@@ -8,7 +8,7 @@ import { useContext } from "react";
 import AppProvide from "../store/AppProvider";
 
 function BottomBar() {
-  const { productCount } = useContext(AppProvide);
+  const { productCount, cart } = useContext(AppProvide);
   return (
     <>
       <div className=" container-fluid bg-crimson-700 d-lg-none fixed-bottom py-3">
@@ -32,13 +32,16 @@ function BottomBar() {
             <MdContactPhone className=" fs-1" />{" "}
             <p className=" m-0 ">Contact</p>
           </NavLink>
-          <a className=" text-center text-light text-decoration-none py-2 position-relative">
+          <NavLink
+            to={"/cart"}
+            className=" text-center text-light text-decoration-none py-2 position-relative"
+          >
             <FaCartShopping className=" fs-1" /> <p className=" m-0 ">Cart</p>
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
-              {productCount()}
+              {cart.length}
               <span className="visually-hidden">unread messages</span>
             </span>
-          </a>
+          </NavLink>
           <a className=" text-center text-light text-decoration-none py-2">
             <MdAccountCircle className=" fs-1" />{" "}
             <p className=" m-0 ">Account</p>
