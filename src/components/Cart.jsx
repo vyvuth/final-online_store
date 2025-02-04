@@ -55,7 +55,7 @@ function Cart() {
                             onChange={(ev) => handleQty(e.id, ev.target.value)}
                           />
                         </td>
-                        <td className="text-end">${e.subtotal.toFixed(2)}</td>
+                        <td className="text-end">${e.subtotal}</td>
                       </tr>
                     );
                   })
