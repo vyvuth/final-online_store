@@ -19,8 +19,8 @@ createRoot(document.getElementById("root")).render(
           <Route path="/product" element={<Product />} />
           <Route path="/contect" element={<Contect />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/*" element={<TestPage />} />
         </Route>
-        <Route path="/*" element={<TestPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

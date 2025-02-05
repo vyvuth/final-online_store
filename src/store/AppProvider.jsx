@@ -173,6 +173,7 @@ export const AppProvider = ({ children }) => {
       )
     );
   };
+
   useEffect(() => {
     try {
       localStorage.setItem("cart", JSON.stringify(cart));

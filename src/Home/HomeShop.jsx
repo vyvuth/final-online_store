@@ -56,24 +56,28 @@ function HomeShop() {
         <h4 className=" mt-3 text-capitalize fs-5 ">Brand of product</h4>
       </div>
       <div className="row overflow-auto flex-nowrap">
-        {brand.map((e, i) => {
-          return (
-            <div key={i} className=" col-lg-3 col-md-3 col-6 border-0">
-              <div className="card overflow-hidden border-0">
-                <div
-                  style={{ height: "150px", width: "150px", padding: "20px" }}
-                  className=" w-100"
-                >
-                  <img
-                    src={e.image}
-                    alt="404"
-                    className=" w-100 h-100 object-fit-cover"
-                  />
+        {loadings ? (
+          <SkalaTon />
+        ) : (
+          brand.map((e, i) => {
+            return (
+              <div key={i} className=" col-lg-3 col-md-3 col-6 border-0">
+                <div className="card overflow-hidden border-0">
+                  <div
+                    style={{ height: "150px", width: "150px", padding: "20px" }}
+                    className=" w-100"
+                  >
+                    <img
+                      src={e.image}
+                      alt="404"
+                      className=" w-100 h-100 object-fit-cover"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })
+        )}
       </div>
     </div>
   );
