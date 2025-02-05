@@ -149,6 +149,7 @@ export const AppProvider = ({ children }) => {
       });
     }
   };
+
   const productDelete = (productId) => {
     setCart((prevCart) => prevCart.filter((e) => e.id !== productId));
 

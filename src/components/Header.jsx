@@ -32,9 +32,10 @@ function Header() {
                 </select>
                 <input
                   type="text"
-                  className=" border-start form-control shadow-none border-0 bg-light rounded-0"
-                  placeholder=" Type to search..."
+                  className="border-start form-control shadow-none border-0 bg-light rounded-0"
+                  placeholder="Type to search..."
                 />
+
                 <button className=" btn bg-light rounded-0 shadow-none border-0">
                   <CiSearch className=" fs-2" />
                 </button>
@@ -52,11 +53,11 @@ function Header() {
                 <div className=" d-flex ms-3">
                   <div
                     style={{ width: 40, height: 40 }}
-                    className=" rounded-circle bg-warning overflow-hidden"
+                    className=" rounded-circle overflow-hidden"
                   >
                     <img
                       className=" w-100 h-100 object-fit-cover"
-                      src="https://www.purina.co.uk/sites/default/files/styles/ttt_image_510/public/2022-06/GettyImages-1186344530.jpg?itok=DPCnhCoO"
+                      src="vy pic.jpg"
                       alt="404"
                     />
                   </div>
@@ -71,10 +72,14 @@ function Header() {
                     </button>
                     <ul className="dropdown-menu">
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <NavLink
+                          to="/account"
+                          className="dropdown-item"
+                          href="#"
+                        >
                           <MdOutlineAccountCircle className=" fs-4 mb-1 ms-1 me-1" />
                           My Account
-                        </a>
+                        </NavLink>
                       </li>
                       <li>
                         <a className="dropdown-item" href="#">
