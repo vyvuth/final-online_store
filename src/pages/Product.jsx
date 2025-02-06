@@ -5,7 +5,8 @@ import { ToastContainer } from "react-toastify";
 import SkalaTon from "./SkalaTon";
 
 function Product() {
-  const { productAPI, addToCarts, loadings } = useContext(AppProvide);
+  const { productAPI, addToCarts, loadings, filteredProducts } =
+    useContext(AppProvide);
   return (
     <>
       <div className=" container">
@@ -16,8 +17,8 @@ function Product() {
         <div className="row">
           {loadings ? (
             <SkalaTon />
-          ) : (
-            productAPI.map((e, i) => {
+          ) : filteredProducts.length > 0 ? (
+            filteredProducts.map((e, i) => {
               return (
                 <div className=" col-lg-4 col-md-6 py-3" key={i}>
                   <div
@@ -71,6 +72,8 @@ function Product() {
                 </div>
               );
             })
+          ) : (
+            "Product not found"
           )}
         </div>
       </div>

@@ -5,7 +5,8 @@ import SkalaTon from "../pages/SkalaTon";
 import { ToastContainer } from "react-toastify";
 
 function HomeShop() {
-  const { product, brand, loadings, addToCart } = useContext(AppProvide);
+  const { product, brand, loadings, addToCart, filterSearcher } =
+    useContext(AppProvide);
   return (
     <div className=" container p-lg-0">
       <ToastContainer />
@@ -13,8 +14,8 @@ function HomeShop() {
       <div className=" row">
         {loadings ? (
           <SkalaTon />
-        ) : (
-          product.map((e, i) => {
+        ) : filterSearcher.length > 0 ? (
+          filterSearcher.map((e, i) => {
             return (
               <div className=" col-6 col-md-4 col-lg-3 py-2" key={i}>
                 <div className=" card overflow-hidden shadow">
@@ -52,6 +53,8 @@ function HomeShop() {
               </div>
             );
           })
+        ) : (
+          "Product not found"
         )}
         <h4 className=" mt-3 text-capitalize fs-5 ">Brand of product</h4>
       </div>

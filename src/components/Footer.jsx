@@ -8,7 +8,7 @@ import "../style.scss";
 function Footer() {
   return (
     <>
-      <div className=" container-fluid bg-crimson-600 bottom-100 py-3 mt-2">
+      <div className=" container-fluid bg-crimson-600 bottom-100 py-3 mt-2 mb-lg-0 mb-md-3 mb-3">
         <div className=" container">
           <div className="row d-flex justify-content-center align-items-center">
             <div className=" col-lg-4 col-md-12 text-center">

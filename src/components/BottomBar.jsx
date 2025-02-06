@@ -6,9 +6,10 @@ import { MdAccountCircle } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import AppProvide from "../store/AppProvider";
+import { ToastContainer } from "react-toastify";
 
 function BottomBar() {
-  const { productCount, cart } = useContext(AppProvide);
+  const { cart } = useContext(AppProvide);
   return (
     <>
       <div className=" container-fluid bg-crimson-700 d-lg-none fixed-bottom py-3">
@@ -42,10 +43,13 @@ function BottomBar() {
               <span className="visually-hidden">unread messages</span>
             </span>
           </NavLink>
-          <a className=" text-center text-light text-decoration-none py-2">
+          <NavLink
+            to="/account"
+            className=" text-center text-light text-decoration-none py-2"
+          >
             <MdAccountCircle className=" fs-1" />{" "}
             <p className=" m-0 ">Account</p>
-          </a>
+          </NavLink>
         </div>
       </div>
     </>

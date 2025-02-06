@@ -8,6 +8,7 @@ function Cart() {
   return (
     <>
       <ToastContainer />
+
       <div className=" container py-5">
         <div className=" col-lg-12 mx-auto">
           <table className=" table">
@@ -55,7 +56,9 @@ function Cart() {
                             onChange={(ev) => handleQty(e.id, ev.target.value)}
                           />
                         </td>
-                        <td className="text-end">${e.subtotal}</td>
+                        <td className="text-end">
+                          ${Number(e.subtotal).toFixed(2)}
+                        </td>
                       </tr>
                     );
                   })

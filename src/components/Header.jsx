@@ -11,7 +11,7 @@ import AppProvide from "../store/AppProvider";
 
 function Header() {
   const [login, setLogin] = useState(true);
-  const { cart } = useContext(AppProvide);
+  const { cart, setSearcher } = useContext(AppProvide);
   return (
     <>
       <div className=" sticky-top">
@@ -34,6 +34,7 @@ function Header() {
                   type="text"
                   className="border-start form-control shadow-none border-0 bg-light rounded-0"
                   placeholder="Type to search..."
+                  onChange={(e) => setSearcher(e.target.value)}
                 />
 
                 <button className=" btn bg-light rounded-0 shadow-none border-0">

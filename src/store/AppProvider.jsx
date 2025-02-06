@@ -152,12 +152,6 @@ export const AppProvider = ({ children }) => {
 
   const productDelete = (productId) => {
     setCart((prevCart) => prevCart.filter((e) => e.id !== productId));
-
-    toast.success("Product deleted successfully...💥", {
-      position: "bottom-right",
-      autoClose: 2000,
-      theme: "dark",
-    });
   };
 
   // increment the value
@@ -175,6 +169,26 @@ export const AppProvider = ({ children }) => {
     );
   };
 
+  // filter search products
+  const [searcher, setSearcher] = useState(""); // Global Search State
+  const filterSearcher = product.filter((products) =>
+    products.title.toLowerCase().includes(searcher.toLowerCase())
+  );
+  const [filteredProducts, setFilteredProducts] = useState([]); // Filtered list
+
+  const filters = () => {
+    setFilteredProducts(
+      productAPI.filter((product) =>
+        product.title.toLowerCase().includes(searcher.toLowerCase())
+      ),
+      productAPI.filter((product) =>
+        product.title.toUpperCase().includes(searcher.toUpperCase())
+      )
+    );
+  };
+  useEffect(() => {
+    filters();
+  }, [searcher]);
   useEffect(() => {
     try {
       localStorage.setItem("cart", JSON.stringify(cart));
@@ -197,6 +211,9 @@ export const AppProvider = ({ children }) => {
         productAPI,
         addToCarts,
         handleQty,
+        setSearcher,
+        filterSearcher,
+        filteredProducts,
       }}
     >
       {children}
